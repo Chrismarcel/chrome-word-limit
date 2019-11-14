@@ -1,0 +1,16 @@
+{
+    "name": "Chrome Word Limit",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "A simple chrome extension that displays the word/character count as you type",
+    "icons": {
+        "16": "src/img/icon16.png",
+        "48": "src/img/icon48.png",
+        "128": "src/img/icon128.png"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["src/js/script.js"],
+        "css": ["src/css/style.css"]
+    }]
+}
