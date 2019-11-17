@@ -13,50 +13,55 @@
             <div class="wl-logo">
                 <img src="./img/header-icon.svg" alt="Word Limit Extension Icon">
             </div>
-            <div class="close-btn">
-                <button type="button">
-                    <svg 
-                        viewBox="0 0 24 24" 
-                        width="24" 
-                        height="24" 
-                        stroke="currentColor" 
-                        stroke-width="1.5" 
-                        fill="none" 
-                        stroke-linecap="round" 
-                        stroke-linejoin="round">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
+            <button type="button" class="wl-close-btn">
+                <svg 
+                    viewBox="0 0 24 24" 
+                    width="24" 
+                    height="24" 
+                    stroke="currentColor" 
+                    stroke-width="1.5" 
+                    fill="none" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
         </header>
         <div class="wl-controls">
-            <section class="text-block">
-                <span>Words</span>
-                <span>100</span>
-                <input>1000</input>
-                <span>Limit</span>
+            <section class="wl-counter-wrapper">
+                <span class="wl-text">Words</span>
+                <div class="wl-counter">
+                    <span class="wl-text-count">100</span>
+                    <input type="number" class="wl-text-limit">
+                </div>
+                <span class="wl-text">Limit</span>
             </section>
             <section class="dropdown-menu">
                 <div class="dropdown">
-                    <i>
-                        <svg 
-                            viewBox="0 0 24 24" 
-                            width="24" 
-                            height="24" 
-                            stroke="currentColor" 
-                            stroke-width="2" 
-                            fill="none" 
-                            stroke-linecap="round" 
-                            stroke-linejoin="round" 
-                            class="css-i6dzq1">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </i>
+                    <span class="wl-limit-type">Limit field by word</span>
+                    <button type="button">
+                        <i>
+                            <svg 
+                                viewBox="0 0 24 24" 
+                                width="24" 
+                                height="24" 
+                                stroke="currentColor" 
+                                stroke-width="1.5" 
+                                fill="none" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                class="css-i6dzq1">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </i>
+                    </button>
                 </div>
             </section>
-            <section class="toggle-limit">
-                <p>Restrict text input if limit is exceeded.</p>
+            <label class="wl-toggle-limit">
+                Restrict text input if limit is exceeded.
+                <input class="wl-checkbox" type="checkbox" name="disable-input">
+                <span></span>
             </section>
         </div>
     </main>
